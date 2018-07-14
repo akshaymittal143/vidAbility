@@ -34,5 +34,17 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Job": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Applicant": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Employers": {
+    "dataSource": "db",
+    "public": true
   }
 }

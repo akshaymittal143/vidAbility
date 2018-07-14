@@ -1,0 +1,53 @@
+{
+  "name": "Job",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "string",
+      "required": true
+    },
+    "Requirements": {
+      "type": "string",
+      "required": true
+    },
+    "Accomodation": {
+      "type": "string"
+    },
+    "Remote": {
+      "type": "boolean"
+    },
+    "InHouse": {
+      "type": "boolean"
+    },
+    "PartTime": {
+      "type": "boolean"
+    },
+    "FullTIme": {
+      "type": "boolean"
+    },
+    "Date": {
+      "type": "string",
+      "required": true
+    },
+    "Applicants": {
+      "type": [
+        "object"
+      ]
+    },
+    "Pay": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

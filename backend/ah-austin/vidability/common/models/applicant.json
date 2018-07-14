@@ -1,0 +1,34 @@
+{
+  "name": "Applicant",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "City": {
+      "type": "string",
+      "required": true
+    },
+    "State": {
+      "type": "string"
+    },
+    "Remote": {
+      "type": "boolean"
+    },
+    "InHouse": {
+      "type": "boolean"
+    },
+    "Resume": {
+      "type": "any"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
