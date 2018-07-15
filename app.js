@@ -49,6 +49,7 @@ var sslOptions = {
 
 //create server
 https.createServer(sslOptions, app).listen(8443)
+console.log('App listening on port 8443');
 //end server
 
 
