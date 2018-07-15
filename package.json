@@ -1,9 +1,10 @@
 {
   "name": "hackathon",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Angel hack Austin team - Viob",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,5 +14,13 @@
     "fetch": "^1.1.0",
     "watson-developer-cloud": "^3.7.0",
     "watson-speech": "^0.34.1"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "2.2.1",
+    "ava": "0.25.0",
+    "supertest": "3.0.0"
+  },
+  "engines": {
+    "node": "8.x.x"
   }
 }
