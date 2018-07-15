@@ -32,6 +32,13 @@ fetch('/api/speech-to-text/token')
       if(text.includes('log in')){
         window.location.href = "https://localhost:8080/my-account.html";
       }
+      if(text.includes('join')){
+        if($('.agora_local').children().length == 0){
+          $('#join').click();
+          stream.stop();
+        }
+
+      }
     })
     stream.on('error', function(err) {
       console.log(err);

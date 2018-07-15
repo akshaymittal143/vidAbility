@@ -1,9 +1,9 @@
 var currentSearch = location.search.split("=").slice(1).join(' ');
 
 currentSearch = currentSearch.toLowerCase();
-if (currentSearch.includes('san francisco')) {
+if (currentSearch.includes("san")) {
   console.log('san fran')
-  $.getJSON('assets/JSON/mockJSON.js', {format: "json"}).done(function(data) {
+  $.getJSON('assets/JSON/SanFranciscoJSON.js', {format: "json"}).done(function(data) {
     data.forEach(function(e, i) {
       $('.job-browse.section .col-md-9').append(`
           <div class="job-list">
@@ -36,7 +36,7 @@ if (currentSearch.includes('san francisco')) {
   });
 } else if (currentSearch.includes("austin")) {
   console.log('austin')
-  $.getJSON('assets/JSON/mockJSON.js', {format: "json"}).done(function(data) {
+  $.getJSON('assets/JSON/AustinJSON.js', {format: "json"}).done(function(data) {
     data.forEach(function(e, i) {
       $('.job-browse.section .col-md-9').append(`
           <div class="job-list">
