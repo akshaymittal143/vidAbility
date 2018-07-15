@@ -14,9 +14,9 @@ fetch('/api/speech-to-text/token')
         var edited = text.split("search for").slice(1).join(' ');
         $('.search-container .form-control').val(edited)
       }
-      if (text.includes('end search')) {
-        var edited = text.split("search for").slice(1).join(' ');
-        $('.search-container .form-control').val(edited)
+      if (text.includes('end search') || text.includes('finish.') || text.includes('finish')) {
+        console.log(text)
+        $('#searchEngine').submit();
       }
       if(text.includes('scroll down')){
         var y = $(window).scrollTop();  //your current y position on the page
