@@ -47,11 +47,21 @@ var sslOptions = {
 };
 //ssl end
 
-//create server
-https.createServer(sslOptions, app).listen(8443)
-console.log('App listening on port 8443');
-//end server
+// //create server
+// https.createServer(sslOptions, app).listen(8443)
+// console.log('App listening on port 8443');
+// //end server
 
+
+if (module === require.main) {
+  // [START server]
+  // Start the server
+  const server = https.createServer(sslOptions, app).listen(process.env.PORT || 8080, () => {
+    const port = server.address().port;
+    console.log(`App listening on port ${port}`);
+  });
+  // [END server]
+}
 
 //host web pages start
 app.get('/', function (req, res) {
@@ -67,3 +77,5 @@ app.get('/video-chat', function (req, res) {
      res.sendFile(path.join(__dirname + '/client/video-chat.html'));
 });
 //host web pages end
+
+module.exports = app;
