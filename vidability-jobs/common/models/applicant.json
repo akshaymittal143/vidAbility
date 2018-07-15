@@ -15,13 +15,11 @@
       "required": true
     },
     "State": {
+      "type": "string",
+      "required": true
+    },
+    "Type": {
       "type": "string"
-    },
-    "Remote": {
-      "type": "boolean"
-    },
-    "InHouse": {
-      "type": "boolean"
     },
     "Resume": {
       "type": "any"

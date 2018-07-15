@@ -1,5 +1,5 @@
 {
-  "name": "vidability",
+  "name": "vidability-jobs",
   "version": "1.0.0",
   "main": "server/server.js",
   "engines": {
@@ -17,7 +17,7 @@
     "loopback": "^3.19.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.0.0",
-    "loopback-connector-mongodb": "^3.4.4",
+    "loopback-connector-mongodb": "^3.3.1",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^3.0.0"
   },
@@ -31,5 +31,5 @@
     "url": ""
   },
   "license": "UNLICENSED",
-  "description": "vidability"
+  "description": "vidability-jobs"
 }

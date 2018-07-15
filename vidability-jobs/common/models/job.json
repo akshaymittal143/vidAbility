@@ -18,32 +18,26 @@
       "type": "string",
       "required": true
     },
-    "Accomodation": {
-      "type": "string"
+    "Type": {
+      "type": "string",
+      "required": true
     },
-    "Remote": {
-      "type": "boolean"
-    },
-    "InHouse": {
-      "type": "boolean"
-    },
-    "PartTime": {
-      "type": "boolean"
-    },
-    "FullTIme": {
-      "type": "boolean"
+    "TimeCommitment": {
+      "type": "string",
+      "required": true
     },
     "Date": {
       "type": "string",
       "required": true
     },
+    "Pay": {
+      "type": "string"
+    },
     "Applicants": {
       "type": [
         "object"
-      ]
-    },
-    "Pay": {
-      "type": "string"
+      ],
+      "required": true
     }
   },
   "validations": [],

@@ -35,7 +35,16 @@
     "dataSource": "db",
     "public": false
   },
-  "Note": {
-    "dataSource": "db"
+  "Job": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Applicant": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Employer": {
+    "dataSource": "db",
+    "public": true
   }
 }

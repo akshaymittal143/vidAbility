@@ -1,5 +1,5 @@
 {
-  "name": "Employers",
+  "name": "Employer",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
