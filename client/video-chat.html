@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Agora Web Sample</title>
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/jasny-bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" type="text/css">
+  <!-- Material CSS -->
+  <link rel="stylesheet" href="assets/css/material-kit.css" type="text/css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/fonts/themify-icons.css">
+
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="assets/extras/animate.css" type="text/css">
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="assets/extras/owl.carousel.css" type="text/css">
+  <link rel="stylesheet" href="assets/extras/owl.theme.css" type="text/css">
+  <!-- Rev Slider CSS -->
+  <link rel="stylesheet" href="assets/extras/settings.css" type="text/css">
+  <!-- Slicknav js -->
+  <link rel="stylesheet" href="assets/css/slicknav.css" type="text/css">
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+  <!-- Responsive CSS Styles -->
+  <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/agora.css" type="text/css">
+  <!-- Color CSS Styles  -->
+  <link rel="stylesheet" type="text/css" href="assets/css/colors/blue.css" media="screen" />
+  <script src="AgoraRTCSDK-2.3.1.js"></script>
+  <script src="vendor/jquery.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-default affix-top" role="navigation" data-spy="affix" data-offset-top="50">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <div class="slicknav_menu">
+          <jobs aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;"><span class="slicknav_menutxt"></span><span class="slicknav_icon slicknav_no-text"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span>
+          </jobs>
+          <ul class="slicknav_nav slicknav_hidden" style="display: none;" aria-hidden="true" role="menu">
+
+            <li class="btn-m"><a href="post-job.html" role="menuitem" tabindex="-1"><i class="ti-pencil-alt"></i> Post A Job</a></li>
+            <li class="btn-m"><a href="my-account.html" role="menuitem" tabindex="-1"><i class="ti-lock"></i>  Log In</a></li>
+          </ul>
+        </div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+        <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo.png" alt=""></a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right float-right">
+        <li class="left"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
+        <li class="right"><a href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>
+      </ul>
+    </div>
+    </div>
+    <!-- Mobile Menu Start -->
+    <ul class="wpb-mobile-menu">
+
+      <li class="btn-m"><a href="post-job.html"><i class="ti-pencil-alt"></i> Post A Job</a></li>
+      <li class="btn-m"><a href="my-account.html"><i class="ti-lock"></i>  Log In</a></li>
+    </ul>
+    <!-- Mobile Menu End -->
+  </nav>
+  <div id="div_device" class="panel panel-default">
+    <div class="select">
+      <label for="audioSource">Audio source: </label><select id="audioSource"></select>
+    </div>
+    <div class="select">
+      <label for="videoSource">Video source: </label><select id="videoSource"></select>
+    </div>
+  </div>
+
+  <div id="div_join" class="panel panel-default">
+    <div class="panel-body">
+      Key: <input id="key" type="text" value="" size="36"></input>
+      Channel: <input id="channel" type="text" value="1000" size="4"></input>
+      Host: <input id="videoCheckbox" type="checkbox" checked></input>
+      <div id="join" onclick="join()" class="call-buttons"><img src="./assets/img/group.png" /></div>
+      <div id="leave" onclick="leave()" class="call-buttons"><img src="./assets/img/endcall.png" /></div>
+    </div>
+  </div>
+
+
+  <div id="video">
+    <div id="agora_local"></div>
+  </div>
+
+  <script type="text/javascript" src="assets/js/agora.js"></script>
+  <script type="text/javascript" src="assets/js/jquery-min.js"></script>
+  <script type="text/javascript" src="assets/js/chatbox.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/material.min.js"></script>
+  <script type="text/javascript" src="assets/js/material-kit.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.parallax.js"></script>
+  <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.slicknav.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
+  <script type="text/javascript" src="assets/js/waypoints.min.js"></script>
+  <script type="text/javascript" src="assets/js/jasny-bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
+  <script type="text/javascript" src="assets/js/form-validator.min.js"></script>
+  <script type="text/javascript" src="assets/js/contact-form-script.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js"></script>
+</body>
+
+</html>
