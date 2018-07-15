@@ -906,7 +906,7 @@ nav#menu span.fa.fa-bars:hover {
 }
 
 .search-container {
-  padding: 500px 0 0;
+  padding: 300px 0 0;
   display: inline-block;
   width: 100%;
   position: relative;
@@ -938,7 +938,7 @@ nav#menu span.fa.fa-bars:hover {
 }
 
 .search-container .content {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(68, 138, 255, 0.15);
   padding: 10px;
   margin-bottom: 30px;
 }
