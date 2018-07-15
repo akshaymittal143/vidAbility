@@ -31,3 +31,12 @@
 .hide {
   display: none;
 }
+
+#call-button-container {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  width: 75vw;
+  justify-content: space-around;
+}
