@@ -1,4 +1,5 @@
 #
 # [START runtime]
+env: flex
 runtime: nodejs8
 # [END runtime]
