@@ -1,8 +1,9 @@
-#video > div:last-child:not(#agora_local){
+#video>div:last-child:not(#agora_local) {
   width: 75vw !important;
-  height:75vh;
+  height: 75vh;
 }
-#agora_local{
+
+#agora_local {
   position: absolute !important;
   right: 0 !important;
   z-index: 1 !important;
@@ -10,16 +11,23 @@
   height: 200px;
   width: 200px;
 }
-#video{
-  width:75vw;
+
+#video {
+  width: 75vw;
   position: relative;
 }
-.call-buttons{
+
+.call-buttons {
   display: inline-block;
   cursor: pointer;
   transition: 0.3s ease;
   -webkit-transition: 0.3s ease;
 }
-.call-buttons:hover{
+
+.call-buttons:hover {
   transform: scale(0.9);
+}
+
+.hide {
+  display: none;
 }
