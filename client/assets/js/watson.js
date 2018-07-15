@@ -27,10 +27,10 @@ fetch('/api/speech-to-text/token')
         $('html, body').animate({scrollTop: '-=150px'}, 300);
       }
       if(text.includes('join video chat')){
-        window.location.href = "https://localhost:8443/video-chat";
+        window.location.href = "https://localhost:8080/video-chat";
       }
       if(text.includes('log in')){
-        window.location.href = "https://localhost:8443/my-account.html";
+        window.location.href = "https://localhost:8080/my-account.html";
       }
     })
     stream.on('error', function(err) {
