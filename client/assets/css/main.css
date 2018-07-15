@@ -4541,3 +4541,9 @@ span.full-time,span.part-time{
 span.full-time.true,span.part-time.true{
   display: inline-block;
 }
+.navbar-brand.logo img{
+  width:125px;
+}
+.widget .img-responsive{
+  width: 200px;
+}
