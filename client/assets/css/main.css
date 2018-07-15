@@ -530,7 +530,7 @@ height: 100%;
 
 .navbar {
   margin-bottom: 0;
-  background: transparent;
+  background: white;
   border: none;
   border-radius: 0px;
   box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.2);
@@ -580,6 +580,8 @@ height: 100%;
   -moz-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
+  border-color:#448AFF;
+  color:#448AFF;
 }
 
 .navbar-default .navbar-nav>li:hover>a, .navbar-default .navbar-nav>li>a.active {
@@ -693,7 +695,7 @@ height: 100%;
 
 .float-right li a {
   font-size: 13px;
-  color: #fff !important;
+  /* color: #fff !important; */
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 10px 15px;
@@ -887,7 +889,6 @@ nav#menu span.fa.fa-bars:hover {
     ====================================================*/
 
 .section-intro {
-  background: url("../img/bg/bg-intro.jpg") center center no-repeat;
   background-size: cover;
   color: #fff;
   position: relative;
@@ -900,7 +901,7 @@ nav#menu span.fa.fa-bars:hover {
   width: 100%;
   height: 100%;
   display: inline-block;
-  background-color: rgba(42, 46, 50, 0.8);
+  background-color: #EDEDED;
   position: absolute;
 }
 
@@ -933,6 +934,7 @@ nav#menu span.fa.fa-bars:hover {
   font-size: 50px;
   letter-spacing: 1px;
   line-height: 30px;
+  color: #263238;
 }
 
 .search-container .content {
@@ -943,9 +945,9 @@ nav#menu span.fa.fa-bars:hover {
 
 .popular-jobs a {
   background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #448AFF;
   padding: 5px 10px;
-  color: #fff;
+  color: #448AFF;
   margin: 0 5px;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -960,7 +962,9 @@ nav#menu span.fa.fa-bars:hover {
   border-color: #448AFF;
   color: #fff;
 }
-
+.popular-jobs b{
+    color: #263238;
+}
 .section-intro .main-text {
   margin: 100px 15px 130px;
   text-transform: uppercase;
