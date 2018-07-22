@@ -12,8 +12,8 @@ var watson = require('watson-developer-cloud');
 var sttAuthService = new watson.AuthorizationV1(
   Object.assign(
     {
-      username: '8eb323ce-cdca-4de3-9980-1884f3d0774c', // or hard-code credentials here
-      password: 'xobkeeCMMhT6'
+      username: '70c5a094-4e8d-446c-a24b-5854897bfb87', // or hard-code credentials here
+      password: 'gMYbJXY8VaJ1'
     },
     vcapServices.getCredentials('speech_to_text') // pulls credentials from environment in bluemix, otherwise returns {}
   )
