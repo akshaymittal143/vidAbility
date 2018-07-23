@@ -14,7 +14,11 @@ fetch('/api/speech-to-text/token')
         var edited = text.split("search for").slice(1).join(' ');
         $('.search-container .form-control').val(edited)
       }
-      if (text.includes('end search') || text.includes('finish.') || text.includes('finish')) {
+      if (text.includes('end search') || 
+          text.includes('finish.') || 
+          text.includes('finish') ||
+          text.includes('go') ||
+          text.includes('inch')) {
         console.log(text)
         $('#searchEngine').submit();
       }
