@@ -39,6 +39,9 @@ app.use('/api/speech-to-text/token', function(req, res) {
 app.use(express.static('client'))
 //end
 
+// use EJS view engine
+app.set('view engine', 'ejs');
+
 //ssl start
 var sslOptions = {
   key: fs.readFileSync('key.pem'),
@@ -65,7 +68,7 @@ if (module === require.main) {
 
 //host web pages start
 app.get('/', function (req, res) {
-    res.render('home.ejs');
+    res.render('home');
 });
 app.get('/login', function (req, res) {
      res.sendFile(path.join(__dirname + '/client/my-account.html'));
