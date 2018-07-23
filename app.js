@@ -65,7 +65,7 @@ if (module === require.main) {
 
 //host web pages start
 app.get('/', function (req, res) {
-     res.sendFile(path.join(__dirname + '/client/index.html'));
+    res.render('home.ejs');
 });
 app.get('/login', function (req, res) {
      res.sendFile(path.join(__dirname + '/client/my-account.html'));
