@@ -8,6 +8,10 @@ const vcapServices = require('vcap_services');
 //watson start
 var watson = require('watson-developer-cloud');
 
+
+app.set('view engine', 'ejs');
+app.set('views',__dirname + '/client/views/');
+app.set('view options', { layout:false, root: __dirname + '/templates' } );
 // to get an IAM Access Token
 var sttAuthService = new watson.AuthorizationV1(
   Object.assign(
@@ -65,7 +69,7 @@ if (module === require.main) {
 
 //host web pages start
 app.get('/', function (req, res) {
-     res.sendFile(path.join(__dirname + '/client/index.html'));
+     res.render('pages/index');
 });
 app.get('/login', function (req, res) {
      res.sendFile(path.join(__dirname + '/client/my-account.html'));

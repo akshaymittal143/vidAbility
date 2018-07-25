@@ -1,0 +1,159 @@
+<% include ../partials/head %>
+
+  <body>
+    <!-- Header Section Start -->
+    <div class="header">
+      <!-- Start intro section -->
+      <section id="intro" class="section-intro" style="height:100vh">
+        <% include ../partials/header %>
+          <!-- Header Section End -->
+          <div class="search-container">
+
+
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Find the job that fits your life</h1><br>
+                  <h2>More than <strong>12,000</strong> jobs are waiting to Kickstart your career!</h2>
+                  <div class="content">
+                    <form method="" action="/browse-jobs" id="searchEngine" method='get'>
+                      <div class="row">
+                        <div class="col-md-10 col-sm-10">
+                          <div class="form-group">
+                            <input class="form-control" type="text" placeholder="job title / keywords / company name" name="search">
+                            <i class="ti-time"></i>
+                          </div>
+                        </div>
+                        <div class="col-md-1 col-sm-1">
+                          <button type="button" class="btn btn-search-icon startSpeech"><img src="./assets/img/white-mic.png"</button>
+                        </div>
+                        <div class="col-md-1 col-sm-1">
+                          <button type="submit" class="btn btn-search-icon"><i class="ti-search"></i></button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="popular-jobs">
+                    <b>Popular Keywords: </b>
+                    <a href="#">Front Desk</a>
+                    <a href="#">Manager</a>
+                    <a href="#">Painter</a>
+                    <a href="#">Part-Time</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <!-- end intro section -->
+    </div>
+
+    <!-- Find Job Section Start -->
+    <section class="find-job section text-center">
+      <span class="color-white meeting-text">
+        You having a meeting with SpaceX now!
+      </span>
+      <a href="/video-chat" class="btn btn-primary">Join Now</a>
+    </section>
+    <section class="find-job section text-center bg-white">
+      <span class="">
+        You having a meeting with Facebook on Tuesday at 1:00pm.
+      </span>
+
+    </section>
+    <section class="find-job section text-center">
+      <span class="color-white">
+        You having a meeting with Austin Car Wash on Friday at 5:00pm.
+      </span>
+    </section>
+    <!-- Find Job Section End -->
+
+
+    <!-- Category Section End -->
+
+
+
+    <!-- Start Purchase Section -->
+    <section class="section purchase" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row">
+          <div class="section-content text-center">
+            <h1 class="title-text">
+             Looking for a Job
+            </h1>
+            <p>Join thousand of employers and earn what you deserve!</p>
+            <a href="my-account.html" class="btn btn-common">Get Started Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Purchase Section -->
+
+    <!-- Footer Section Start -->
+    <% include ../partials/footer %>
+    <!-- Footer Section End -->
+
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="ti-arrow-up"></i>
+    </a>
+
+    <a href="#" class="chatbox-activator">
+      <i class="fa fa-comments"></i>
+    </a>
+
+    <div class="chatbox">
+      <div class="operator-details">
+        <div class="col-md-6 text-left">
+          <h4>Sarah Cooper</h4>
+          <small>PR</small>
+        </div>
+        <div class="col-md-6 text-right">
+          <img src="http://via.placeholder.com/150x150" alt="">
+        </div>
+      </div>
+      <div class="chatarea">
+        <div class="user">
+          <span>Hi!</span>
+        </div>
+        <div class="operator">
+          <span>hello! How are you doing today?</span>
+        </div>
+
+      </div>
+      <div class="textarea">
+        <form class="" action="index.html" method="post">
+          <input type="text" name="" value="" placeholder="Type here...">
+          <button type="submit" name="button"></button>
+        </form>
+      </div>
+    </div>
+    <section style="display:none">
+      <h2>Transcribe from Microphone</h2>
+      <button id="button">Start Microphone Transcription</button>
+      <button id="stop">Stop</button>
+
+      <h2>Output:</h2>
+      <div id="output">--</div>
+    </section>
+    <div id="loading">
+      <div id="loading-center">
+        <div id="loading-center-absolute">
+          <div class="object" id="object_one"></div>
+          <div class="object" id="object_two"></div>
+          <div class="object" id="object_three"></div>
+          <div class="object" id="object_four"></div>
+          <div class="object" id="object_five"></div>
+          <div class="object" id="object_six"></div>
+          <div class="object" id="object_seven"></div>
+          <div class="object" id="object_eight"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main JS  -->
+    <% include ../partials/jsscripts %>
+
+  </body>
+
+  </html>

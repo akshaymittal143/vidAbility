@@ -901,7 +901,7 @@ nav#menu span.fa.fa-bars:hover {
   width: 100%;
   height: 100%;
   display: inline-block;
-  background-color: #EDEDED;
+  background-color: white;
   position: absolute;
 }
 
