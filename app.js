@@ -5,13 +5,26 @@ var fs = require('fs');
 var app = express();
 var path = require('path');
 const vcapServices = require('vcap_services');
+
+//Firebase
+var firebase = require('firebase-admin');
+var serviceAccount = require('./config/keys.json');
+
+firebase.initializeApp({
+  credential: firebase.credential.cert(serviceAccount),
+  databaseURL: 'https://users-7ddf3.firebaseio.com/'
+});
+const dbRefObject = firebase.database().ref().child('first_name');
+dbRefObject.on('value', snap => console.log(snap.val()));
 //watson start
 var watson = require('watson-developer-cloud');
 
+const pageRouter = require('./config/routes');
 
 app.set('view engine', 'ejs');
 app.set('views',__dirname + '/client/views/');
 app.set('view options', { layout:false, root: __dirname + '/templates' } );
+app.use('/',pageRouter);
 // to get an IAM Access Token
 var sttAuthService = new watson.AuthorizationV1(
   Object.assign(
@@ -68,18 +81,7 @@ if (module === require.main) {
 }
 
 //host web pages start
-app.get('/', function (req, res) {
-     res.render('pages/index');
-});
-app.get('/login', function (req, res) {
-  res.render('pages/my-account');
-});
-app.get('/browse-jobs', function (req, res) {
-  res.render('pages/browse-jobs');
-});
-app.get('/video-chat', function (req, res) {
-  res.render('pages/video-chat');
-});
+
 //host web pages end
 
 module.exports = app;
