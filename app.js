@@ -72,13 +72,13 @@ app.get('/', function (req, res) {
      res.render('pages/index');
 });
 app.get('/login', function (req, res) {
-     res.sendFile(path.join(__dirname + '/client/my-account.html'));
+  res.render('pages/my-account');
 });
 app.get('/browse-jobs', function (req, res) {
-     res.sendFile(path.join(__dirname + '/client/browse-jobs.html'));
+  res.render('pages/browse-jobs');
 });
 app.get('/video-chat', function (req, res) {
-     res.sendFile(path.join(__dirname + '/client/video-chat.html'));
+  res.render('pages/video-chat');
 });
 //host web pages end
 
