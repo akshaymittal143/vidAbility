@@ -1,14 +1,20 @@
 <% include ../partials/head %>
+  <link rel="stylesheet" href="assets/css/agora.css" type="text/css">
 <body>
   <% include ../partials/header %>
-  <div id="div_device" class="hide">
-    <div class="select">
-      <label for="audioSource">Audio source: </label><select id="audioSource"></select>
-    </div>
-    <div class="select">
-      <label for="videoSource">Video source: </label><select id="videoSource"></select>
+  <div id="div_device">
+    <div  class="container">
+      <div class="row">
+        <div class="select col-md-6">
+          <label for="audioSource">Audio source: </label><select id="audioSource"></select>
+        </div>
+        <div class="select col-md-6">
+          <label for="videoSource">Video source: </label><select id="videoSource"></select>
+        </div>
+      </div>
     </div>
   </div>
+
 
   <div id="div_join" class="hide">
     Key: <input id="key" type="text" value="e3a35450798548da88252a23d3ba87b9" size="36" class="hide"></input>
@@ -16,22 +22,43 @@
     Host: <input id="videoCheckbox" type="checkbox" checked></input>
   </div>
   <div id="call-button-container">
-    <div id="join" onclick="join()" class="call-buttons"><img src="./assets/img/call.png" /></div>
-    <div id="leave" onclick="leave()" class="call-buttons"><img src="./assets/img/off.png" /></div>
+    <button id="join" onclick="join()" class="call-buttons btn btn-primary">Join Call</button>
   </div>
 
 
   <div id="video">
     <div id="agora_local"></div>
   </div>
-  <section style="display:none">
-    <h2>Transcribe from Microphone</h2>
-    <button id="button">Start Microphone Transcription</button>
-    <button id="stop">Stop</button>
+  <div id="sidebar-chat">
 
-    <h2>Output:</h2>
-    <div id="output">--</div>
-  </section>
+  </div>
+  <div id="chat-options">
+    <div class="">
+      <ul>
+        <li>
+          <button type="button" name="button" class="btn btn-primary">
+            <i><i class="fas fa-microphone"></i></i>
+            <span>Mic off</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" name="button" class="btn btn-primary" onclick="mVideo()">
+            <i class="fas fa-video"></i>
+            <span>Cam off</span>
+          </button>
+
+        </li>
+        <li >
+          <button type="button" name="button" onclick="leave()" id="leave" class="btn btn-primary">
+            <i class="fas fa-times-circle"></i>
+            <span>Leave</span>
+          </button>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="assets/js/AgoraRTCSDK-2.3.1.js"></script>
   <script type="text/javascript" src="assets/js/agora.js"></script>
   <% include ../partials/jsscripts %>
 </body>

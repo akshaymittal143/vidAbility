@@ -10,11 +10,14 @@
   top: 0 !important;
   height: 200px;
   width: 200px;
+  background: rgba(13, 22, 36, .6);
 }
 
 #video {
   width: 75vw;
   position: relative;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .call-buttons {
@@ -32,11 +35,78 @@
   display: none;
 }
 
+#sidebar-chat {
+  margin-bottom: 0;
+  display: inline-block;
+  height: 100%;
+  width: 25%;
+  height: 75vh;
+  background-color: darkgray;
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+}
+
 #call-button-container {
   position: fixed;
-  bottom: 0;
+  top: 50%;
   z-index: 1;
+  left: 50%;
   display: flex;
-  width: 75vw;
   justify-content: space-around;
+  margin-left: -86.39px;
+  margin-top: -33px;
+}
+
+#join {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#div_device {
+  background-color: #448AFF;
+  padding: 10px;
+}
+
+#div_device label {
+  color: white;
+  padding-right: 5px;
+}
+
+#chat-options {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  margin-left: -183.36px;
+}
+
+#chat-options li {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 4;
+}
+
+#chat-options button {
+  background: transparent;
+  border: none;
+  height: 100%;
+  width: 100%;
+  width: 120px;
+  height: 80px;
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px 0px;
+  cursor: pointer;
+  z-index: 4;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+}
+
+#chat-options button:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+#chat-options span, #chat-options i {
+  display: block;
+  text-align: center;
 }

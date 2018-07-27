@@ -23,6 +23,7 @@ var videoSelect = document.querySelector('select#videoSource');
 function join() {
   document.getElementById("join").disabled = true;
   document.getElementById("videoCheckbox").disabled = true;
+  $('#call-button-container').css('display','none')
   var channel_key = null;
 
   console.log("Init AgoraRTC client with vendor key: " + key.value);
@@ -126,6 +127,9 @@ function leave() {
   document.getElementById("leave").disabled = true;
   client.leave(function () {
     console.log("Leavel channel successfully");
+    $('#call-button-container').css('display','block')
+    document.getElementById("join").disabled = false;
+    document.getElementById("videoCheckbox").disabled = false;
   }, function (err) {
     console.log("Leave channel failed");
   });
@@ -166,6 +170,9 @@ function getDevices() {
   });
 }
 
+function mVideo() {
+
+}
 //audioSelect.onchange = getDevices;
 //videoSelect.onchange = getDevices;
 getDevices();
