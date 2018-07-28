@@ -23,6 +23,7 @@ var videoSelect = document.querySelector('select#videoSource');
 function join() {
   document.getElementById("join").disabled = true;
   document.getElementById("videoCheckbox").disabled = true;
+  document.getElementById("leave").disabled = false;
   $('#call-button-container').css('display','none')
   var channel_key = null;
 
@@ -127,7 +128,8 @@ function leave() {
   document.getElementById("leave").disabled = true;
   client.leave(function () {
     console.log("Leavel channel successfully");
-    $('#call-button-container').css('display','block')
+    $('#call-button-container').css('display','block');
+    $('#agora_local div').remove();
     document.getElementById("join").disabled = false;
     document.getElementById("videoCheckbox").disabled = false;
   }, function (err) {
@@ -171,7 +173,35 @@ function getDevices() {
 }
 
 function mVideo() {
+  if(localStream.disableVideo()){
+    localStream.disableVideo();
+    $('#chat-options .camera i').addClass('fa-video-slash');
+    $('#chat-options .camera i').removeClass('fa-video');
+    $('#chat-options .camera span').text('Cam on');
+    $('#chat-options .camera').addClass('off');
+  }else{
+    localStream.enableVideo();
+    $('#chat-options .camera i').addClass('fa-video');
+    $('#chat-options .camera i').removeClass('fa-video-slash');
+    $('#chat-options .camera span').text('Cam off');
+    $('#chat-options .camera').removeClass('off');
+  }
+}
 
+function mMic() {
+  if(localStream.disableAudio()){
+    localStream.disableAudio();
+    $('#chat-options .microphone i').addClass('fa-microphone-slash');
+    $('#chat-options .microphone i').removeClass('fa-microphone');
+    $('#chat-options .microphone span').text('Mic on');
+    $('#chat-options .microphone').addClass('off');
+  }else{
+    localStream.enableAudio();
+    $('#chat-options .microphone i').addClass('fa-microphone');
+    $('#chat-options .microphone i').removeClass('fa-microphone-slash');
+    $('#chat-options .microphone span').text('Mic off');
+    $('#chat-options .microphone').removeClass('off');
+  }
 }
 //audioSelect.onchange = getDevices;
 //videoSelect.onchange = getDevices;

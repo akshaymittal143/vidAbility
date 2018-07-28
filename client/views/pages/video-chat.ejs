@@ -30,25 +30,30 @@
     <div id="agora_local"></div>
   </div>
   <div id="sidebar-chat">
+    <div class="chat">
 
+    </div>
+    <div class="text">
+      <textarea name="name" rows="8" cols="80"></textarea>
+    </div>
   </div>
   <div id="chat-options">
     <div class="">
       <ul>
-        <li>
-          <button type="button" name="button" class="btn btn-primary">
-            <i><i class="fas fa-microphone"></i></i>
+        <li class="microphone">
+          <button type="button" name="button" class="btn btn-primary" onClick="mMic()">
+            <i class="fas fa-microphone"></i>
             <span>Mic off</span>
           </button>
         </li>
-        <li>
+        <li class="camera">
           <button type="button" name="button" class="btn btn-primary" onclick="mVideo()">
             <i class="fas fa-video"></i>
             <span>Cam off</span>
           </button>
 
         </li>
-        <li >
+        <li class="leave">
           <button type="button" name="button" onclick="leave()" id="leave" class="btn btn-primary">
             <i class="fas fa-times-circle"></i>
             <span>Leave</span>
