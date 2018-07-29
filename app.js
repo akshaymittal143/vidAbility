@@ -30,6 +30,8 @@ app.use(yes({
   preload: true             // defaults `true`
 }));
 
+app.set('trust proxy', true);
+
 app.set('view engine', 'ejs');
 app.set('views',__dirname + '/client/views/');
 app.set('view options', { layout:false, root: __dirname + '/templates' } );
