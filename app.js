@@ -1,8 +1,9 @@
 var express = require('express');
 var http = require('http');
 var https = require('https');
+const yes = require('yes-https');
 var fs = require('fs');
-var app = express();
+// var app = express();
 var path = require('path');
 const vcapServices = require('vcap_services');
 
@@ -20,6 +21,14 @@ dbRefObject.on('value', snap => console.log(snap.val()));
 var watson = require('watson-developer-cloud');
 
 const pageRouter = require('./config/routes');
+
+let app = express();
+
+app.use(yes({
+  maxAge: 86400,            // defaults `86400`
+  includeSubdomains: true,  // defaults `true`
+  preload: true             // defaults `true`
+}));
 
 app.set('view engine', 'ejs');
 app.set('views',__dirname + '/client/views/');
@@ -76,12 +85,9 @@ if (module === require.main) {
   const server = https.createServer(sslOptions, app).listen(process.env.PORT || 8080, () => {
     const port = server.address().port;
     console.log(`App listening on port ${port}`);
+    console.log('Press Ctrl+C to quit.');
   });
   // [END server]
 }
-
-//host web pages start
-
-//host web pages end
 
 module.exports = app;

@@ -15,7 +15,8 @@
     "fetch": "^1.1.0",
     "firebase-admin": "^5.13.1",
     "watson-developer-cloud": "^3.7.0",
-    "watson-speech": "^0.34.1"
+    "watson-speech": "^0.34.1",
+    "yes-https": "0.0.4"
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "2.2.1",
