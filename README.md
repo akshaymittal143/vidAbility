@@ -1,4 +1,4 @@
-# Angel Hack - Austindev Team
+# Angel Hack - Austindev Team (An Amazing Project)
 
 - How to run the application?
 1. git clone https://github.com/akshaymittal143/angelhack-austin.git
